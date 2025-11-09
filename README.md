@@ -7,7 +7,8 @@ Um site criado para quem ama surf e viagens, com informações em tempo real sob
 🔗 Acesse o site ao vivo > https://laisbarb.github.io/SurfPackers.Website/
 
 🌎 Sobre o Projeto
-O Surf Packers é um projeto feito para conectar surfistas e viajantes. O site traz um verificador de ondas em tempo real, além de um blog e guias de viagem. Ele foi desenvolvido do zero — desde o design responsivo até a parte do servidor — com foco em desempenho e segurança.
+O Surf Packers é uma comunidade criada por mim que conecta viajantes solos pelo mundo. 
+O site também traz um verificador de ondas em tempo real, além de um blog e guias de viagem. Ele foi desenvolvido do zero — desde o design responsivo até a parte do servidor.
 
 ✨ Funcionalidades
 
