@@ -1,0 +1,1167 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&family=Pinyon+Script&family=Playfair+Display:wght@700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --cor-sobreposta: #fed8a6;
+    --cor-containers: #dfc49b;
+    --cor-de-fundo-principal: #f0e2ce;
+    --cor-texto-escuro: #875e37;
+    --cor-texto-claro: #121111;
+    --cor-milk-coffe:#9b7d61;
+    --eucalyptus:#92ada4;
+    --Roasted-peach:#daa38f;
+    --cor-cinza-claro: #fcfcfc;
+    --cor-borda-cinza: #ccc; 
+}
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--cor-texto-escuro);
+    background-color: var(--cor-de-fundo-principal); 
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+}
+
+/* Layout Geral */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+}
+
+/* CABEÇALHO E NAVEGAÇÃO */
+.cabecalho-principal {
+    background-color: var(--cor-sobreposta); 
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.container-navegacao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #875e37;
+}
+
+.grupo-nav {
+    display: flex;
+    gap: 40px;
+}
+
+.logo {
+    margin: 0 50px;
+}
+
+.logo a {
+    font-family: 'Cormorant Garamond', serif;
+    color: #875e37;
+    font-size: 1.8rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+/* SEÇÃO 1: CAPA */
+.secao-capa {
+    position: relative;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--cor-de-fundo-principal);
+    background-size: cover;
+    background-position: center bottom;
+}
+
+.capa-sobreposicao {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.capa-conteudo {
+    position: relative;
+    z-index: 1;
+    max-width: 900px;
+    padding: 20px;
+    margin-top: -200px;
+}
+
+.titulo-principal {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 6rem;
+    font-weight: 300;
+    letter-spacing: 5px;
+    line-height: 1.1;
+    margin-bottom: 0px;
+}
+
+.subtitulo {
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.0;
+    max-width: 600px;
+    margin: 0 auto;
+    margin-bottom: 0; 
+}
+
+/* SEÇÃO SOBRE */
+.secao-sobre-nova {
+display: grid;
+grid-template-columns: 1fr 1.2fr 1fr;
+align-items: center;
+gap: 2rem;
+padding: 70px 40px;
+background-color: var(--cor-de-fundo-principal); 
+}
+
+.sobre-coluna {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sobre-imagem-wrapper {
+    position: relative;
+    max-width: 350px; 
+}
+
+.sobre-imagem-nova {
+    width: 100%;
+    height: 500px; 
+    object-fit: cover;
+    display: block;
+}
+
+/* Coluna Esquerda e Círculo de Texto */
+.sobre-coluna-esquerda .sobre-imagem-wrapper {
+    justify-self: end;
+}
+
+.sobre-circulo-texto {
+    position: absolute;
+    top: -40px;
+    left: -40px;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+
+.texto-rotativo-svg {
+    width: 100px;
+    height: 100px;
+    animation: girar 15s linear infinite; 
+    overflow: visible;
+}
+
+@keyframes girar {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Coluna Central */
+.sobre-coluna-centro {
+    flex-direction: column;
+    text-align: center;
+    color: var(--cor-milk-coffe); 
+}
+
+.sobre-saudacao {
+    font-family: 'Pinyon Script', cursive; 
+    font-size: 2.5rem;
+    margin-bottom: 0;
+    line-height: 1;
+}
+
+.sobre-titulo-principal {
+    font-family: 'Cormorant Garamond', serif; 
+    font-size: 4.5em;
+    font-weight: 400;
+    color: var(--cor-texto-escuro); 
+    line-height: 1.1;
+    text-transform: uppercase;
+    margin: 10px 0 20px 0;
+}
+
+.sobre-descricao {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    max-width: 450px;
+    line-height: 1.7;
+    margin-bottom: 30px;
+    color: var(--cor-texto-escuro); 
+}
+
+.btn-nossa-historia {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--eucalyptus); 
+    color: var(--cor-de-fundo-principal);
+    padding: 15px 40px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+.btn-nossa-historia:hover {
+    background-color: var(--Roasted-peach);
+}
+
+/* Coluna Direita */
+.sobre-coluna-direita .sobre-imagem-wrapper {
+    justify-self: start;
+}
+
+/* SEÇÃO BLOG */ 
+.secao-blog-nova {
+    padding: 90px 20px;
+    background-color: #fcfcfc; 
+}
+
+.container-blog {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr; 
+    gap: 50px;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.blog-galeria-imagens {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    align-items: start; 
+}
+
+.blog-galeria-imagens img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    display: block;
+}
+
+.blog-imagem-principal {
+    grid-column: 2 / 3;
+    grid-row: 1 / 3;
+}
+
+.blog-imagem-secundaria {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    align-self: end; 
+}
+
+.blog-imagem-pequena-wrapper {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; 
+    height: 100%;
+}
+
+.blog-nota-imagem {
+    font-family: 'Cormorant Garamond', serif;
+    color: var(--cor-texto-escuro);
+    text-transform: uppercase;
+    font-size: 0.9em;
+    letter-spacing: 1.5px;
+    line-height: 2;
+    margin-bottom: 20px;
+}
+
+.blog-conteudo-texto {
+    padding-left: 20px;
+}
+
+.blog-titulo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 4.5em;
+    font-weight: 400;
+    color: var(--cor-texto-escuro); 
+    line-height: 1.1;
+    margin: 0 0 25px 0;
+}
+
+.blog-descricao {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1em;
+    color: var(--cor-texto-claro); 
+    margin: 0; 
+    line-height: 1.8; 
+}
+
+.blog-descricao:not(:last-of-type) {
+    margin-bottom: 2em; 
+}
+
+.blog-descricao:first-of-type::first-line {
+    font-weight: 500; 
+    font-size: 1.1em; 
+}
+
+.secao-divisor-onda {
+    background-color: var(--cor-de-fundo-principal); 
+    padding: 0.5rem 0; 
+    text-align: center; 
+    overflow: hidden;
+}
+
+.divisor-texto-reto {
+    color: var(--cor-texto-escuro); 
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.8rem; 
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 4px; 
+    margin: 0; 
+}
+
+/* SEÇÃO VIAGENS E ANIMAÇÕES */
+.secao-viagens {
+    padding: 80px 20px; 
+    text-align: center;
+    background-color: var(--cor-de-fundo-principal); 
+    overflow: hidden; 
+}
+
+.secao-viagens .titulo-secao {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3em;
+    font-weight: 400;
+    color: var(--cor-texto-escuro); 
+    line-height: 1.1;
+    margin: 0 0 25px 0;
+   }   
+
+.secao-viagens .descricao-secao {
+ font-family: 'Cormorant Garamond', serif;
+ font-size: 1.2rem;
+    margin-bottom: 50px;
+    color: var(--cor-texto-escuro);
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container-imagens-viagens {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px; 
+    margin-bottom: 50px;
+    padding: 10px 0;
+    flex-wrap: wrap;
+}
+
+.imagem-viagem {
+    width: 280px;
+    height: 350px;
+    object-fit: cover; 
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out, box-shadow 0.3s ease;
+}
+
+.imagem-viagem:hover {
+    transform: scale(1.08) translateY(-7px) rotate(1.5deg);
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.25);
+    opacity: 1;
+}
+
+.container-imagens-viagens.in-view .imagem-viagem {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.container-imagens-viagens.in-view .imagem-viagem:nth-child(1) {
+    transition-delay: 0.1s;
+}
+.container-imagens-viagens.in-view .imagem-viagem:nth-child(2) {
+    transition-delay: 0.2s;
+}
+.container-imagens-viagens.in-view .imagem-viagem:nth-child(3) {
+    transition-delay: 0.3s;
+}
+.container-imagens-viagens.in-view .imagem-viagem:nth-child(4) {
+    transition-delay: 0.4s;
+}
+
+.btn-explorar-viagens {
+    display: inline-block;
+    padding: 15px 30px;
+    border: 1px solid var(--cor-texto-escuro);
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 0.9rem;
+    letter-spacing: 1.5px;
+    transition: background-color 0.3s, color 0.3s;
+    text-decoration: none;
+    color: var(--cor-texto-escuro);
+}
+
+.btn-explorar-viagens:hover {
+    background-color: var(--cor-texto-escuro);
+    color: var(--cor-sobreposta); 
+}
+
+/* SEÇÃO GUIAS DE SURF TRIP*/
+
+.api-condicoes-tempo-real {
+    background-color: var(--cor-cinza-claro); 
+    margin: 0px 0; 
+    padding: 0px 0; 
+    text-align: center;
+}
+
+.conteudo-interno-branco {
+    background-color: var(--cor-de-fundo-principal); 
+    max-width: 3000px; 
+    margin: 0 auto; 
+    padding: 2px 40px 60px 40px; 
+    border-radius: 0px; 
+}
+
+.api-condicoes-tempo-real .titulo-secao {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3.5rem;
+    font-weight: 400;
+    color: var(--cor-texto-escuro);
+}
+
+.spot-info-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    text-align: center;
+    margin: 60px 0;
+}
+
+.spot-info-item i.fas {
+    font-size: 2.5rem; 
+    color: var(--eucalyptus); 
+    margin-bottom: 20px;
+}
+
+.spot-info-item h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: var(--cor-texto-escuro);
+}
+
+.spot-info-item p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+    color: var(--cor-texto-escuro);
+    line-height: 1.6;
+}
+
+.spot-divider {
+    border: 10;
+    height: 1px; 
+    background-color: transparent; 
+    opacity: 0.0;
+    width: 80%; 
+    margin: 70px auto 60px auto; 
+}
+.btn-planejar {
+    display: inline-block;
+    padding: 10px 30px;
+    border: 1px solid var(--cor-texto-escuro);
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 0.9rem;
+    letter-spacing: 1.5px;
+    transition: background-color 0.3s, color 0.3s;
+    text-decoration: none;
+    color: var(--cor-texto-escuro);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.btn-planejar:hover {
+    background-color: var(--cor-texto-escuro);
+    color: var(--cor-sobreposta); 
+}
+
+.spot-info-grid {
+  position: relative;
+}
+
+.btn-planejar {
+  display: block;
+  margin: 40px auto -60px auto; 
+  grid-column: 1 / -1; 
+  text-align: center;
+}
+
+/* SEÇÃO Condicoes do mar */
+
+.subtitulo-secao-ondas {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500;
+    font-size: 2.8rem; 
+    color: var(--cor-texto-escuro);
+    margin-bottom: 1.2px; 
+    margin: 10px auto 0 auto;
+}
+
+.descricao-secao-pequena {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem; 
+    color: var(--cor-texto-escuro);
+    opacity: 0.7; 
+    margin-bottom: 40px;
+}
+
+.beach-selector {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    gap: 10px; 
+    margin: 40px auto 0 auto;
+    z-index: 1;
+    position: relative;
+}
+
+.beach-selector label {
+    font-size: 0.9rem; 
+    font-weight: 600;
+    color: var(--cor-texto-escuro);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+#beach-select {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1rem; 
+    font-weight: 500;
+    color: var(--cor-texto-escuro);
+    background-color: #ffffff; 
+    padding: 15px 40px 15px 20px;
+    border: 2px solid var(--cor-texto-escuro); 
+    border-radius: 5px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%20viewBox%3D%220%200%20292.4%20292.4%22%3E%3Cpath%20fill%3D%22%2392ada4%22%20d%3D%22M287%20197.35L146.4%2056.75L5.8%20197.35l-5.6%205.7l15%2015l136.2-136.2L277.6%20218l14.8-15l-5.4-5.6z%22%2F%3E%3C%2Fsvg%3E');
+    background-repeat: no-repeat;
+    background-position: right 15px top 50%;
+    background-size: 14px auto;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    max-width: 450px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+#beach-select:focus {
+    border-color: var(--Roasted-peach); 
+    outline: none;
+    box-shadow: 0 0 10px rgba(146, 173, 164, 0.4); 
+}
+
+.btn-api-check {
+    font-family: 'Montserrat', sans-serif;
+    display: inline-block;
+    padding: 18px 40px; 
+    border: none; 
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 0.9rem;
+    letter-spacing: 1.5px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    color: var(--cor-cinza-claro); 
+    background-color: var(--eucalyptus); 
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: -10px; 
+    box-shadow: 0 8px 20px -5px rgba(146, 173, 164, 0.7); 
+    z-index: 2; 
+    position: relative; 
+}
+
+.btn-api-check:hover {
+    background-color: var(--cor-texto-escuro); 
+    transform: translateY(-2px); 
+    box-shadow: 0 10px 25px -5px rgba(135, 94, 55, 0.6);
+}
+
+/* O CONTAINER DE RESULTADOS */
+
+
+.card-previsao {
+    max-width: 800px;
+    margin: 40px auto 0 auto; 
+    background-color: var(--cor-cinza-claro);
+    border-radius: 8px;
+    border: 1px solid var(--cor-borda-cinza);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
+    overflow: hidden;
+    text-align: center;
+}
+
+.card-titulo-praia {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--cor-texto-escuro);
+    padding: 20px 15px;
+    margin: 0;
+    background-color: rgba(0,0,0,0.02);
+    border-bottom: 1px solid var(--cor-borda-cinza);
+}
+
+.metricas-wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+}
+
+.bloco-info-wrapper {
+    padding: 25px 15px;
+    border-right: 1px solid var(--cor-borda-cinza);
+}
+.bloco-info-wrapper:last-child {
+    border-right: none;
+}
+
+.bloco-titulo {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--cor-milk-coffe);
+    display: block;
+    margin-bottom: 15px;
+}
+.bloco-titulo i.fas {
+    color: var(--eucalyptus);
+    margin-right: 5px;
+}
+
+.metrica-principal {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--cor-texto-escuro);
+    margin-bottom: 8px;
+    line-height: 1.3;
+}
+
+.metrica-detalhe {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+    color: var(--cor-milk-coffe);
+}
+
+.label-temp {
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--cor-milk-coffe);
+}
+
+.loading-message {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--cor-texto-escuro);
+    padding: 40px 20px;
+}
+
+.mensagem-erro {
+    color: var(--Roasted-peach); 
+    border: 1px solid var(--Roasted-peach);
+    background-color: rgba(218, 163, 143, 0.05); 
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: none; 
+    max-width: 800px;
+    margin: 20px auto 0 auto;
+}
+
+/* --- SEÇÃO CONTATO - */
+
+.secao-contato .titulo-secao {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3.5rem;
+    font-weight: 400;
+    color: var(--cor-texto-escuro);
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.secao-contato .descricao-secao {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1rem;
+    color: var(--cor-texto-escuro);
+    margin-bottom: 50px;
+    text-align: center;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.form-container {
+    width: 60%;
+    padding: 40px;
+    margin: 0 auto 80px auto;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-container input[type="text"],
+.form-container input[type="email"],
+.form-container textarea {
+    width: 100%;
+    padding: 15px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    color: var(--cor-texto-escuro);
+    background-color: var(--cor-cinza-claro);
+    border: 1px solid var(--cor-borda-cinza);
+    border-radius: 5px;
+    box-sizing: border-box; 
+}
+
+.form-container textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.form-container input[type="text"]::placeholder,
+.form-container input[type="email"]::placeholder,
+.form-container textarea::placeholder {
+    color: var(--cor-milk-coffe);
+    text-transform: capitalize;
+}
+
+.form-container input[type="text"]:focus,
+.form-container input[type="email"]:focus,
+.form-container textarea:focus {
+    outline: none;
+    border-color: var(--eucalyptus);
+    box-shadow: 0 0 10px rgba(146, 173, 164, 0.4);
+}
+
+.btn-enviar-contato {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--cor-texto-escuro);
+    color: var(--cor-de-fundo-principal);
+    padding: 15px 40px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.btn-enviar-contato:hover {
+    background-color: var(--eucalyptus);
+    color: var(--cor-cinza-claro);
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+#form-status {
+    margin-top: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}
+
+.info-contato {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.95rem;
+    color: var(--cor-texto-escuro);
+    padding-top: 10px; 
+}
+
+.info-contato h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--cor-texto-escuro);
+    margin-bottom: 20px;
+}
+
+.info-contato p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.info-contato p i.fas {
+    font-size: 1rem;
+    color: var(--eucalyptus);
+    margin-right: 12px;
+    width: 20px; 
+    text-align: center;
+}
+
+.links-sociais {
+    margin-top: 30px;
+    display: flex;
+    gap: 20px;
+}
+
+.links-sociais a {
+    font-size: 1.5rem;
+    color: var(--cor-texto-escuro);
+    transition: color 0.3s ease;
+}
+
+.links-sociais a:hover {
+    color: var(--eucalyptus);
+}
+
+.rodape-principal {
+    display: none; 
+}
+
+/* --- SEU RODAPÉ (VERSÃO MAIS FINA) --- */
+
+.rodape-novo {
+    background-color: var(--Roasted-peach);
+    color: var(--cor-cinza-claro);
+    /* ALTERADO: Reduzido de 70px para 40px */
+    padding: 40px 40px 0 40px; 
+}
+
+.rodape-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1.5fr; 
+    gap: 40px; 
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.rodape-coluna {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+}
+
+.logo-rodape {
+    font-family: 'Cormorant Garamond', serif;
+    color: var(--cor-cinza-claro);
+    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.rodape-coluna .descricao-marca {
+    line-height: 1.7;
+    max-width: 300px;
+}
+
+.rodape-coluna h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    /* ALTERADO: Reduzido de 20px para 15px */
+    margin-bottom: 15px;
+}
+
+.rodape-coluna ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.rodape-coluna ul li {
+    /* ALTERADO: Reduzido de 12px para 10px */
+    margin-bottom: 10px;
+}
+
+.rodape-coluna ul li a {
+    text-decoration: none;
+    color: var(--cor-cinza-claro);
+    transition: color 0.3s ease;
+}
+
+.rodape-coluna ul li a:hover {
+    color: var(--cor-cinza-claro);
+}
+
+.rodape-copyright {
+    text-align: center;
+    padding: 20px 20px; 
+    margin-top: 30px; 
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.85rem;
+    color: var(--cor-cinza-claro);
+}
+/* ============================== */
+/* RESPONSIVIDADE GERAL */
+/* ============================== */
+
+/* Telas muito grandes (monitores acima de 1600px) */
+@media (min-width: 1600px) {
+  .container {
+    max-width: 1400px;
+  }
+
+  .titulo-principal {
+    font-size: 7rem;
+  }
+
+  .sobre-titulo-principal,
+  .blog-titulo {
+    font-size: 5.5rem;
+  }
+
+  .secao-viagens .titulo-secao {
+    font-size: 3.5rem;
+  }
+
+  .spot-info-item h3 {
+    font-size: 1.8rem;
+  }
+
+  .form-container {
+    width: 50%;
+  }
+}
+
+/* Telas grandes (notebooks e desktops padrão) */
+@media (max-width: 1200px) {
+  .container {
+    padding: 0 20px;
+  }
+
+  .titulo-principal {
+    font-size: 5rem;
+  }
+
+  .sobre-titulo-principal,
+  .blog-titulo {
+    font-size: 3.8rem;
+  }
+
+  .container-blog {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .blog-conteudo-texto {
+    padding: 0;
+  }
+
+  .sobre-descricao {
+    max-width: 400px;
+  }
+}
+
+/* Telas médias (tablets e iPads) */
+@media (max-width: 992px) {
+  .container-navegacao {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .logo {
+    margin: 10px 0;
+  }
+
+  .secao-sobre-nova {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 60px 20px;
+  }
+
+  .sobre-imagem-wrapper {
+    max-width: 300px;
+  }
+
+  .sobre-descricao {
+    max-width: 500px;
+    margin: 0 auto 20px auto;
+  }
+
+  .container-blog {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .blog-titulo {
+    font-size: 3rem;
+  }
+
+  .spot-info-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .form-container {
+    width: 80%;
+  }
+}
+
+/* Telas pequenas (celulares) */
+@media (max-width: 768px) {
+  .titulo-principal {
+    font-size: 3.2rem;
+    line-height: 1.2;
+  }
+
+  .subtitulo {
+    font-size: 1.1rem;
+  }
+
+  .sobre-titulo-principal {
+    font-size: 2.8rem;
+  }
+
+  .secao-sobre-nova {
+    padding: 50px 15px;
+  }
+
+  .sobre-descricao {
+    font-size: 0.95rem;
+  }
+
+  .container-imagens-viagens {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .imagem-viagem {
+    width: 90%;
+    height: auto;
+  }
+
+  .spot-info-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .form-container {
+    width: 90%;
+    padding: 25px;
+  }
+
+  .btn-enviar-contato {
+    padding: 12px 25px;
+    font-size: 0.85rem;
+  }
+}
+
+/* Telas muito pequenas (celulares compactos) */
+@media (max-width: 480px) {
+  .titulo-principal {
+    font-size: 2.4rem;
+  }
+
+  .sobre-titulo-principal,
+  .blog-titulo {
+    font-size: 2.2rem;
+  }
+
+  .sobre-saudacao {
+    font-size: 1.8rem;
+  }
+
+  .secao-viagens .titulo-secao {
+    font-size: 2rem;
+  }
+
+  .descricao-secao-pequena {
+    font-size: 1rem;
+  }
+
+  .btn-explorar-viagens,
+  .btn-planejar,
+  .btn-nossa-historia {
+    width: 100%;
+    font-size: 0.8rem;
+    padding: 12px 20px;
+  }
+
+  #beach-select {
+    padding: 12px 15px;
+  }
+
+  .metricas-wrapper {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .bloco-info-wrapper {
+    border-right: none;
+  }
+
+  .form-container {
+    width: 100%;
+    padding: 20px;
+  }
+}
