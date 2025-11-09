@@ -64,5 +64,6 @@ app.get('/api/waves/conditions', async (req, res) => {
 
 app.listen(PORT, () => {
     console.log(`Servidor Node.js do backend rodando em http://localhost:${PORT}`);
+
     console.log(`API Key da Storm Glass carregada: ${process.env.STORM_GLASS_API_KEY ? 'SIM' : 'NÃO'}`);
 });
