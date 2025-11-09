@@ -7,7 +7,8 @@ Um site com um desing fofo e aconchegante criado para quem ama surf e viagens, c
 
 🌎 Sobre o Projeto
 O Surf Packers é uma comunidade criada por mim que conecta viajantes solos pelo mundo. 
-O site também traz um verificador de ondas em tempo real, além de um blog e guias de viagem. Ele foi desenvolvido do zero — desde o design responsivo até a parte do servidor.
+O site também traz um verificador de ondas em tempo real, e informa sobre o que é a comunidade e como participar.
+Ele foi desenvolvido do zero, desde o design responsivo até a parte do servidor.
 
 ✨ Funcionalidades
 
@@ -15,7 +16,7 @@ Verificador de Ondas: Escolha uma praia e veja dados atualizados sobre altura da
 
 Design Responsivo: O layout se adapta bem a qualquer tela — computador, tablet ou celular.
 
-Formulário de Contato: Envio direto de mensagens via Formspree.
+Formulário de Contato: Envio direto de mensagens via API Formspree.
 
 Animações Suaves: Efeitos visuais que deixam a navegação mais leve e moderna.
 
