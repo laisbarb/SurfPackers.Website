@@ -963,9 +963,7 @@ background-color: var(--cor-de-fundo-principal);
     font-size: 0.85rem;
     color: var(--cor-cinza-claro);
 }
-/* ============================== */
 /* RESPONSIVIDADE GERAL */
-/* ============================== */
 
 /* Telas muito grandes (monitores acima de 1600px) */
 @media (min-width: 1600px) {
@@ -1164,4 +1162,47 @@ background-color: var(--cor-de-fundo-principal);
     width: 100%;
     padding: 20px;
   }
+}
+
+/* --- CORREÇÕES FINAIS DE RESPONSIVIDADE --- */
+
+@media (max-width: 900px) {
+    /* Faz o rodapé ter 2 colunas em tablets */
+    .rodape-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    /* CORREÇÃO DA CAPA (FOTO PRINCIPAL): */
+    .secao-capa {
+        /* Muda o ponto de foco da imagem. 'Center center' 
+           geralmente funciona melhor que 'center bottom' em celulares */
+        background-position: center center;
+    }
+    
+    .capa-conteudo {
+        /* A margem negativa de -200px do desktop quebra o 
+           layout no celular. Reduzimos ela aqui. */
+        margin-top: -100px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .rodape-grid {
+        grid-template-columns: 1fr;
+        text-align: center; /* Centraliza o texto de tudo */
+    }
+
+    
+    .rodape-coluna .descricao-marca {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .capa-conteudo {
+        margin-top: -50px;
+    }
 }
